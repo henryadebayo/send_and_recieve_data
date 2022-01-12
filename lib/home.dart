@@ -9,6 +9,8 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  get response => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +21,17 @@ class _MyHomeState extends State<MyHome> {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("$postData().response.statusCode"),
-          Text("$postData().catch.statusCode"),
-          IconButton(onPressed: postData(), icon: Icon(Icons.connect_without_contact),),
-          TextButton(onPressed: postData(), child: child)
+          Text("$res"),
+          Text("$error"),
+          IconButton(onPressed:(){
+            setState((){
+              postData();
+            });
+          }, icon: Icon(Icons.connect_without_contact),),
+         // TextButton(onPressed: postData(), child: child)
         ],
       ),
     );
