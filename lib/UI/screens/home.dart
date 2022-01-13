@@ -28,7 +28,7 @@ class _MyHomeState extends State<MyHome> {
           Text("$error"),
           IconButton(onPressed:(){
             setState((){
-              postData();
+              //signUp();
             });
           }, icon: Icon(Icons.connect_without_contact),),
          // TextButton(onPressed: postData(), child: child)

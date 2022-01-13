@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 UserModel userModelFromJson(String atrbutes) => UserModel.fromJson(json.decode(atrbutes));
 String userModelToJson(UserModel data)=> json.encode(data.toJson());
 class UserModel{
-  String? firstName;
-  String? lastName;
-  String? emailAddress;
-  String? passWord;
+  String firstName;
+  String lastName;
+  String emailAddress;
+  String passWord;
 
   UserModel({
-    this.firstName,
-    this.lastName,
-    this.emailAddress,
-    this.passWord
+    required this.firstName,
+    required this.lastName,
+    required this.emailAddress,
+    required this.passWord
 });
 factory UserModel.fromJson(Map<String, dynamic>json)=> UserModel(
   firstName: json['firstname'],
