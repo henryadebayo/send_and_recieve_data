@@ -24,7 +24,7 @@ class _MyHomeState extends State<MyHome> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("$res"),
+          Center(child: Text("$res")),
           Text("$error"),
           IconButton(onPressed:(){
             setState((){
