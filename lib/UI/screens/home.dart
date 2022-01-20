@@ -24,6 +24,13 @@ class _MyHomeState extends State<MyHome> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Form(child:Column(
+            children: [
+              TextFormField(
+
+              ),
+            ],
+          )),
           Center(child: Text("$res")),
           Text("$error"),
           IconButton(onPressed:(){
